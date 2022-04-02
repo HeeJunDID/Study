@@ -1,4 +1,5 @@
 import sys
+
 sys.stdin = open("./ex1.txt")
 
 n = int(sys.stdin.readline())
