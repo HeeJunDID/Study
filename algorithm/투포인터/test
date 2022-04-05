@@ -1,0 +1,27 @@
+import re
+logs = ["team_name : MyTeam application_name : YourApp error_level : info messag : IndexOutOfRange", "no such file or directory", "team_name : recommend application_name : recommend error_level : info message : RecommendSucces11", "team_name : recommend application_name : recommend error_level : info message : Success!", "   team_name : db application_name : dbtest error_level : info message : test", "team_name     : db application_name : dbtest error_level : info message : test", "team_name : TeamTest application_name : TestApplication error_level : info message : ThereIsNoError"]
+cnt = 0
+#taem
+print(len(logs))
+for i in logs:
+  state = True
+  if len(re.findall('(team_name :| application_name :| error_level :| message :)', i)) == 4:
+    if len(i) > 100:
+      state = False
+      continue
+    check = re.split('(team_name : | application_name : | error_level : | message : )',i)
+    print(check)
+    
+    if len(check[0]) > 1:
+      state = False
+      continue
+    for j in range(len(check)):
+      if check[j] in ['team_name : ', ' application_name : ', ' error_level : ', ' message : ']:
+        continue
+      if len(re.findall('[^a-zA-Z]',check[j])) > 0:
+        print(check[j])
+        state = False
+    if state:
+      cnt += 1
+    # print(re.search('(team_name :| application_name :| error_level :| message :)', logs[i]))
+print(len(logs) - cnt)
