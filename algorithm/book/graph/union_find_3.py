@@ -1,11 +1,17 @@
 # 개선된 서로소 집합 알고리즘 소스코드
+<<<<<<< HEAD
 
 # 특정 원소가 속한 집합을 찾기
 def find_parent(parent,x):
+=======
+# 특정 원소가 속한 집합을 찾기
+def find_parent(parent, x):
+>>>>>>> 9a56cc5845b847a16ab58da890a61f61544bc91e
     # 루트 노드가 아니라면, 루트 노드를 찾을 때까지 재귀적으로 호출
     if parent[x] != x:
         parent[x] = find_parent(parent, parent[x])
     return parent[x]
+<<<<<<< HEAD
 # 두 원소가 속한 집합을 합치기
 def union_parent(parent, a, b):
     a = find_parent(parent, a)
@@ -39,3 +45,5 @@ print()
 print('부모 테이블: ', end = '')
 for i in range(1, v + 1):
     print(parent[i], end = ' ')
+=======
+>>>>>>> 9a56cc5845b847a16ab58da890a61f61544bc91e
