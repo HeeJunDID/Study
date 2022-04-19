@@ -1,0 +1,5 @@
+2022-04-06 17:03:23,346 - simpleExample - DEBUG - debug message
+2022-04-06 17:03:23,346 - simpleExample - INFO - info message
+2022-04-06 17:03:23,347 - simpleExample - WARNING - warn message
+2022-04-06 17:03:23,347 - simpleExample - ERROR - error message
+2022-04-06 17:03:23,347 - simpleExample - CRITICAL - critical message
